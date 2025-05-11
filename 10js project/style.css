@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Center Content */
+header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+.projects-grid {
+  position: absolute;
+  top: 150px;               /* Below the header */
+  right: 400px;             /* Move it away from the far edge */
+  width: 250px;             /* Width of the project list */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  z-index: 1;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 1); /* Solid background on hover */
+  transform: scale(1.1);
+}
+
+.project-card:active {
+  transform: scale(1);
+}
+
+/* Spline Animation */
+.spline-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
